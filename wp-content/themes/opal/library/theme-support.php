@@ -22,6 +22,9 @@ if ( ! function_exists( 'foundationpress_theme_support' ) ) :
 			)
 		);
 
+		// Add site logo support
+		add_theme_support( 'custom-logo' );
+
 		// Add menu support
 		add_theme_support( 'menus' );
 

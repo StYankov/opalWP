@@ -3,7 +3,7 @@
 
 @import 'settings';
 @import 'foundation';
-@import 'motion-ui';
+// @import 'motion-ui';
 
 @include foundation-global-styles;
 //@include foundation-grid;
@@ -19,22 +19,22 @@
 @include foundation-badge;
 @include foundation-breadcrumbs;
 @include foundation-button-group;
-@include foundation-callout;
+// @include foundation-callout;
 @include foundation-card;
 @include foundation-close-button;
 @include foundation-menu;
 @include foundation-menu-icon;
-@include foundation-drilldown-menu;
+// @include foundation-drilldown-menu;
 @include foundation-dropdown;
 @include foundation-dropdown-menu;
-@include foundation-responsive-embed;
+// @include foundation-responsive-embed;
 @include foundation-label;
 @include foundation-media-object;
 @include foundation-off-canvas;
-@include foundation-orbit;
+// @include foundation-orbit;
 @include foundation-pagination;
 @include foundation-progress-bar;
-@include foundation-slider;
+// @include foundation-slider;
 @include foundation-sticky;
 @include foundation-reveal;
 @include foundation-switch;
@@ -46,12 +46,12 @@
 @include foundation-top-bar;
 @include foundation-visibility-classes;
 // @include foundation-float-classes;
-@include foundation-flex-classes;
+// @include foundation-flex-classes;
 
 // @include foundation-prototype-classes;
 
-@include motion-ui-transitions;
-@include motion-ui-animations;
+// @include motion-ui-transitions;
+// @include motion-ui-animations;
 
 /*
   My custom styles:
@@ -63,7 +63,8 @@
 @import "global/colors";
 @import "global/wp-admin";
 @import "global/wp-overrides";
-@import "global/gutenberg";
+// @import "global/gutenberg";
+@import "global/mixins";
 
 // Modules
 @import "modules/navigation";
@@ -79,5 +80,5 @@
 @import "components/links";
 
 // Templates
-@import "templates/front";
-@import "templates/kitchen-sink";
+// @import "templates/front";
+// @import "templates/kitchen-sink";
