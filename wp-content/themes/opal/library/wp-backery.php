@@ -36,9 +36,9 @@ function foundationpress_vc_text_block_settings( $attributes, $tag ) {
             'heading'    => 'Dots Position',
             'param_name' => 'dots_position',
             'value'      => [
-                'left'   => 'Left',
-                'center' => 'Center',
-                'right'  => 'Right'
+                'Left'   => 'left',
+                'Center' => 'center',
+                'Right'  => 'right'
             ]
         ];
     }
