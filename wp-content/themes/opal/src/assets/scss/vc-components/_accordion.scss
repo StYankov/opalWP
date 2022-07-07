@@ -1,0 +1,28 @@
+.vc_tta-accordion.vc_general {
+    .vc_tta-panels-container .vc_tta-panel .vc_tta-panel-heading {
+        background-color: transparent !important;
+        border: 0;
+        border-radius: 0;
+        border-top: 1px solid #606060;
+
+        a {
+            font-family: $header-font-family;
+            color: #fff;
+            font-size: rem-calc(24);
+            padding: rem-calc(30 0);
+        }
+    }
+
+    .vc_tta-panels-container .vc_tta-panel.vc_active .vc_tta-panel-heading {
+        background-color: transparent;
+        border-color: #606060;
+
+        .vc_tta-panel-title > a {
+            color: #fff;
+        }
+    }
+
+    .vc_tta-panel .vc_tta-panel-body {
+        padding-left: 0;
+    }
+}

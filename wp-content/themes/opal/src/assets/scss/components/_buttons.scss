@@ -1,8 +1,28 @@
-.sites-button {
-  background: $primary-color;
-  font-size: 1.25rem;
+.button {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: rem-calc(12);
+  border-radius: rem-calc(50);
   font-weight: bold;
-  box-shadow: 0 -2px 0 rgba(0,0,0,0.2) inset;
-  border-radius: 3px;
-  border: none;
+  letter-spacing: -0.03rem;
+}
+
+.button--white {
+  background-color: #fff;
+
+  &:hover {
+    background-color: #000;
+    color: #fff;
+  }
+}
+
+.button--hover-white:hover  {
+  background-color: $accent;
+  color: #fff;
+}
+
+.button--big {
+  height: rem-calc(55);
+  line-height: rem-calc(55);
+  padding: rem-calc(0 50);
 }

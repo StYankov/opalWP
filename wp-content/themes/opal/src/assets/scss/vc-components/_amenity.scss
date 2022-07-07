@@ -1,0 +1,23 @@
+.amenity {
+    display: flex;
+    align-items: center;
+    margin-bottom: rem-calc(22);
+
+    i {
+        color: $accent;
+        font-size: rem-calc(16);
+        margin-right: rem-calc(8);
+    }
+
+    h6 {
+        font-size: rem-calc(14);
+        font-weight: 700;
+        color: #fff;
+        margin-bottom: 0;
+        transition: 0.3s ease-out;
+    }
+
+    &:hover h6 {
+        color: $accent;
+    }
+}

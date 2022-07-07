@@ -57,15 +57,43 @@ if ( ! function_exists( 'foundationpress_scripts' ) ) :
 		// Enqueue Foundation scripts
 		wp_enqueue_script( 'foundation', get_stylesheet_directory_uri() . '/dist/assets/js/' . foundationpress_asset_path( 'app.js' ), array( 'jquery' ), '2.10.4', true );
 
+		// Font Awesome
+		wp_enqueue_style( 'fontawesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css' );
+
 		// Enqueue FontAwesome from CDN. Uncomment the line below if you need FontAwesome.
-		//wp_enqueue_script( 'fontawesome', 'https://use.fontawesome.com/5016a31c8c.js', array(), '4.7.0', true );
+		// wp_enqueue_script( 'fontawesome', 'https://use.fontawesome.com/5016a31c8c.js', array(), '4.7.0', true );
 
 		// Add the comment-reply library on pages where it is necessary
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 			wp_enqueue_script( 'comment-reply' );
 		}
 
+		global $post;
+
+		if( $post && has_shortcode( $post->post_content, 'front_slider' ) ) {
+			wp_enqueue_style( 'slick', '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css' );
+			wp_enqueue_script( 'slick', '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js', ['jquery'], '1.8.1', true );
+		}
+
 	}
 
 	add_action( 'wp_enqueue_scripts', 'foundationpress_scripts' );
+endif;
+
+if( ! function_exists( 'opal_google_fonts' ) ) :
+	function opal_google_fonts() {
+		?>
+			<link rel="preconnect" href="https://fonts.googleapis.com">
+			<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+			<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto:wght@400;700&family=Zilla+Slab:wght@300;400&display=swap" rel="stylesheet">
+		<?php
+	}
+
+	add_action( 'wp_head', 'opal_google_fonts' );
+endif;
+
+if( ! function_exists( 'vc_template_file' ) ) :
+	function vc_template_file( $path ) {
+		return get_template_directory() . '/vc_templates/' . $path;
+	}
 endif;

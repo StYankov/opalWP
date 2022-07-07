@@ -9,9 +9,11 @@
  */
 ?>
 
-<footer class="footer-container">
-	<div class="footer-grid">
-		<?php dynamic_sidebar( 'footer-widgets' ); ?>
+<footer id="footer">
+	<div class="grid-container">
+		<div class="grid-x">
+			<?php dynamic_sidebar( 'footer-widgets' ); ?>
+		</div>
 	</div>
 </footer>
 

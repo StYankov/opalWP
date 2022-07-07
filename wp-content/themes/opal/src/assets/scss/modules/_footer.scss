@@ -1,23 +1,15 @@
-.footer-container {
-  @include xy-grid-container;
-  border-top: 1px solid $medium-gray;
-  margin-top: rem-calc(60);
-}
+#footer {
+  background-color: #383838;
+  margin-top: rem-calc(20);
+  padding: rem-calc(60 0);
 
-.footer-grid {
-  @include xy-grid;
-  padding: rem-calc(30) 0;
-
-  section {
-    @include xy-cell();
-    @include breakpoint(large) {
-      @include xy-cell(auto);
-    }
+  @include breakpoint(medium) {
+    padding: rem-calc(90 0);
   }
 
-  ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+  @include breakpoint(large) {
+    padding: rem-calc(120 0);
   }
 }
+
+@import '../components/footer-widget';

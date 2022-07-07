@@ -1,0 +1,191 @@
+.front-slider-container {
+    position: relative;
+    max-height: rem-calc(500);
+
+    @include breakpoint(large) {
+        max-height: rem-calc(800);
+    }
+
+    .front-slider__overlay {
+        @include position(absolute, 0, 0, 0, 0);
+        display: flex;
+        align-items: center;
+        background-color: rgba(0,0,0,0.25);
+        z-index: 50;
+
+        .grid-container {
+            width: 100%;
+        }
+
+        .front-slider__subheading {
+            color: #fff;
+            text-transform: uppercase;
+            font-size: rem-calc(12);
+            font-weight: 600;
+            letter-spacing: rem-calc(2);
+            margin-bottom: rem-calc(10);
+        }
+        
+        .front-slider__heading {
+            font-size: rem-calc(42);
+            font-weight: 700;
+            color: #fff;
+            text-transform: uppercase;
+            line-height: 1.15;
+            margin: 0;
+
+            @include breakpoint(medium) {
+                font-size: rem-calc(60);
+            }
+
+            @include breakpoint(large) {
+                font-size: rem-calc(80);
+            }
+        }
+
+        .front-slider__location {
+            @include font-zillo;
+            font-size: rem-calc(24);
+            line-height: rem-calc(36);
+            max-width: rem-calc(460);
+            margin-bottom: rem-calc(25);
+            color: #fff;
+        }
+
+        .front-slider__above-price {
+            font-size: rem-calc(12);
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 0;
+            text-transform: uppercase;
+            letter-spacing: rem-calc(2);
+        }
+
+        .front-slider__price {
+            color: $accent;
+            line-height: 1;
+            margin-bottom: 0;
+            font-weight: bold;
+        }
+
+        a.button {
+            margin-top: rem-calc(36);
+            margin-bottom: 0;
+        }
+
+        .left-col {
+            padding-right: rem-calc(35);
+
+            @include breakpoint(large) {
+                border-right: 1px solid #fff;
+            }
+        }
+
+        .right-col {
+            padding: rem-calc(10 0);
+            order: -1;
+
+            @include breakpoint(large) {
+                padding-left: rem-calc(50);
+                order: 2;
+            }
+        }
+
+        .dots {
+            margin-top: rem-calc(26);
+        }
+    }
+}
+.front-slider {
+    position: relative;
+    display: flex;
+    min-height: rem-calc(500);
+
+    @include breakpoint(large) {
+        max-height: rem-calc(800);
+    }
+
+    &:not(.slick-initialized) .front-slider__item:not(:first-child) {
+        display: none;
+    }
+
+    .slick-list,
+    .slick-slide,
+    .slick-track {
+        min-height: rem-calc(500) !important;
+        @include breakpoint(large) {
+            max-height: rem-calc(800);
+        }
+    }
+
+    .slick-dots {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        list-style: none;
+        display: flex;
+        margin-left: 0;
+        transform: translateX(-50%);
+        z-index: 101;
+
+        button {
+            width: rem-calc(16);
+            height: rem-calc(16);
+            border: 2px solid #fff;
+            border-radius: 50%;
+            text-indent: -9999px;
+            margin: rem-calc(0 5);
+            transition: 0.3s ease-out;
+        }
+
+        li.slick-active button {
+            background-color: #fff;
+        }
+    }
+
+    .slick-arrow {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: rem-calc(100);
+        height: rem-calc(100);
+        border-radius: 0;
+        background-color: rgba(0,0,0,0.25);
+        transform: translateY(-50%);
+        cursor: pointer;
+        z-index: 100;
+
+        &:hover {
+            background-color: #fff;
+
+            i {
+                color: #000;
+            }
+        }
+
+        i {
+            color: #fff;
+            font-size: rem-calc(24);
+        }
+    }
+
+    .slick-next {
+        right: 0;
+        left: auto;
+    }
+
+    &__item {
+        flex: 1;
+        max-height: rem-calc(800);
+    }
+
+    &__item img {
+        object-fit: cover;
+        width: 100%;   
+        height: 100%;
+        min-height: rem-calc(500);
+    }
+}

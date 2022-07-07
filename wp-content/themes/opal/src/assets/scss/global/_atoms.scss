@@ -1,0 +1,19 @@
+.font-zillo {
+    @include font-zillo;
+}
+
+.text-muted {
+    color: #666;
+}
+
+.text-white {
+    color: #fff;
+}
+
+.line-height-175 {
+    line-height: 1.75;
+}
+
+.mb-0 {
+    margin-bottom: 0;
+}

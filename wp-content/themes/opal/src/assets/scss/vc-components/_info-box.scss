@@ -1,0 +1,50 @@
+.icon-box {
+    display: flex;
+    padding: rem-calc(40 30 30);
+    border-radius: rem-calc(4);
+    justify-content: center;
+    transition: 0.2s ease-out;
+
+    &:hover {
+        background-color: $accent;
+        color: #fff;
+
+        .icon-box__icon {
+            border-color: #fff;
+        }
+
+        i,
+        .icon-box__description {
+            color: #fff;
+        }
+    }
+
+    &__icon {
+        width: rem-calc(64);
+        min-width: rem-calc(64);
+        height: rem-calc(64);
+        border-radius: 50%;
+        border: 1px solid $accent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: rem-calc(15);
+
+        i {
+            color: $accent;
+            font-size: rem-calc(24);
+        }
+    }
+
+    &__heading {
+        font-family: Roboto;
+        line-height: 1;
+        margin-bottom: rem-calc(12);
+    }
+
+    &__description {
+        @include font-zillo;
+        color: #666;
+        margin-bottom: 0;
+    }
+}

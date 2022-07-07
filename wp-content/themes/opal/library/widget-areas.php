@@ -31,6 +31,8 @@ if ( ! function_exists( 'foundationpress_sidebar_widgets' ) ) :
 				'after_title'   => '</h6>',
 			)
 		);
+
+		register_widget( Opal_Footer_Widget::class );
 	}
 
 	add_action( 'widgets_init', 'foundationpress_sidebar_widgets' );

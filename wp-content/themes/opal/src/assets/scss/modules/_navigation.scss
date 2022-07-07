@@ -1,3 +1,19 @@
+.top-bar {
+  @include show-for(medium);
+  height: rem-calc(130);
+  width: 100%
+}
+
+.title-bar {
+  width: 100%;
+}
+
+.title-bar-left {
+  display: flex;
+  justify-content: space-between;
+  align-items: center
+}
+
 // Navigation breakpoints
 .mobile-menu,
 .site-title-bar {
@@ -25,4 +41,17 @@
 
 .nav-next {
   float:right;
+}
+
+.top-bar .top-bar-right {
+  a {
+    font-size: rem-calc(14);
+    color: $black;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  a:hover {
+    color: $accent;
+  }
 }

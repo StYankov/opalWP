@@ -51,8 +51,22 @@ require_once( 'library/sticky-posts.php' );
 /** Configure responsive image sizes */
 require_once( 'library/responsive-images.php' );
 
+/** WP Backery Extensions */
+require_once( 'library/wp-backery.php' );
+
+/** Footer Widget */
+require_once( 'library/widgets/class-opal-footer-widget.php' );
+
+add_action( 'init', function() {
+    if( ! function_exists( 'vc_map' ) )
+        return;
+    
+    foreach( glob( __DIR__ . '/vc-components/*.php') as $file )
+          require_once $file;
+} );
+
 /** Gutenberg editor support */
-require_once( 'library/gutenberg.php' );
+// require_once( 'library/gutenberg.php' );
 
 /** If your site requires protocol relative url's for theme assets, uncomment the line below */
 // require_once( 'library/class-foundationpress-protocol-relative-theme-assets.php' );

@@ -55,3 +55,5 @@ if ( ! function_exists( 'foundationpress_theme_support' ) ) :
 
 	add_action( 'after_setup_theme', 'foundationpress_theme_support' );
 endif;
+
+add_filter('wpcf7_autop_or_not', '__return_false');
