@@ -1,0 +1,150 @@
+.image-hotspot {
+    @include xy-grid;
+    background-color: #fff;
+    border-radius: rem-calc(5);
+    overflow: hidden;
+
+    @include breakpoint(medium) {
+        height: rem-calc(550);
+    }
+
+    .pins-list {
+        padding: rem-calc(20 10 20 20);
+
+        @include breakpoint(medium) {
+            @include xy-cell(4, null, 0);
+            padding: rem-calc(40 15 40 40);
+        }
+    }
+    
+    .hotspot-map {
+        @include breakpoint(medium) {
+            @include xy-cell(8, null, 0);
+        }
+
+        .wrap_svl_center,
+        .wrap_svl_center_box,
+        .wrap_svl,
+        .images_wrap {
+            display: flex;
+            height: 100%;
+        }
+
+        .pin-circle {
+            width: rem-calc(22);
+            height: rem-calc(22);
+            background-color: #fff;
+            border-radius: 50%;
+            border: 7px solid $accent;
+            cursor: pointer;
+        }
+
+        .pins_animation {
+            width: rem-calc(22) !important;
+            height: rem-calc(22) !important;
+            left: 0px !important;
+            top: 0px !important;
+            bottom: auto !important;
+            right: auto !important;
+            box-shadow: 0 0 0 0 rgba(255, 255, 255, 1);
+            transform: translate(-50%, -50%);
+            animation: pulse-white 1.5s infinite;
+            border: 0;
+        }
+    }
+
+    .accordion {
+        max-height: rem-calc(500);
+        overflow: auto;
+        padding-right: rem-calc(20);
+
+        &::-webkit-scrollbar {
+            background-color: #e0e0e0;
+            width: rem-calc(4);
+            border-radius: rem-calc(4);
+        }
+        
+        &::-webkit-scrollbar-track {
+            background-color: #e0e0e0;
+        }
+        
+        &::-webkit-scrollbar-thumb {
+            background-color: $accent;
+        }
+
+        .accordion-item + .accordion-item {
+            border-top: 1px solid #e0e0e0;
+        }
+
+        .accordion-item.is-active .accordion-title::before {
+            color: $accent;
+            border-color: $accent;
+            transform: rotateZ(180deg);
+        }
+
+        .accordion-title {
+            color: #666;
+            font-family: $header-font-family;
+            background-color: transparent;
+            border: 0;
+            font-size: rem-calc(18);
+            font-weight: bold;
+            padding: rem-calc(25);
+            padding-left: 0;
+
+            &::before {
+                content: "\f063";
+                font-family: "Font Awesome 6 Free";
+                font-weight: 900;
+                color: #000;
+                border-radius: 50%;
+                width: rem-calc(20);
+                height: rem-calc(20);
+                border: 1px solid #000;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: rem-calc(12);
+                transition: 0.3s ease-out;
+            }
+        }
+
+        .accordion-content {
+            @include font-zillo;
+            line-height: 1.75;
+            color: #666;
+            border: 0;
+            padding: 0;
+            padding-right: rem-calc(16);
+            padding-bottom: rem-calc(24);
+        }
+    }
+}
+
+@keyframes pulse-white {
+    0% {
+      transform: scale(0.95);
+      box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+    }
+    
+    70% {
+      transform: scale(1);
+      box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+    }
+    
+    100% {
+      transform: scale(0.95);
+      box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+    }
+}
+
+#powerTip {
+    font-family: $header-font-family;
+    font-weight: bold;
+    background-color: #fff;
+    border-radius: rem-calc(4);
+    font-size: rem-calc(16);
+    line-height: rem-calc(18);
+    color: #333;
+    padding: rem-calc(14 28);
+}

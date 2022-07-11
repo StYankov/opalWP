@@ -1,0 +1,87 @@
+.isotope-gallery {
+    .gallery-filters {
+        display: flex;
+        justify-content: center;
+        margin-bottom: rem-calc(40);
+
+        button {
+            font-family: Roboto;
+            margin: rem-calc(0 5);
+            background-color: transparent;
+            color: #999;
+            padding: rem-calc(12 20);
+            letter-spacing: 0.02rem;
+
+            &:hover,
+            &.active {
+                background-color: $accent;
+                color: #000;
+            }
+        }
+    }
+
+    .gallery-items {
+        @include xy-grid;
+
+        .gallery-item {
+            @include xy-cell;
+            margin-bottom: rem-calc(20);
+            overflow: hidden;
+
+            @include breakpoint(medium) {
+                @include xy-cell(4);
+            }
+
+            @include breakpoint(xlarge) {
+                @include xy-cell(3);
+            }
+
+            img {
+                width: 100%;
+                height: auto;
+                border-radius: rem-calc(5);
+
+                @include breakpoint(medium) {
+                    height: rem-calc(220);
+                    object-fit: cover;
+                }
+            }
+
+            &__overlay {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                display: flex;
+                width: 100%;
+                height: 100%;
+                justify-content: center;
+                align-items: center;
+                color: #000;
+                cursor: pointer;
+
+                &::before {
+                    content: '';
+                    width: calc(100% - 20px);
+                    height: calc(100% - 20px);
+                    position: absolute;
+                    top: 10px;
+                    left: 10px;
+                    z-index: 1;
+                    background-color: $accent;
+                }
+            }
+
+            .icon-container {
+                position: relative;
+                width: rem-calc(35);
+                height: rem-calc(35);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                border: 2px solid #000;
+                z-index: 2;
+            }
+        }
+    }
+}

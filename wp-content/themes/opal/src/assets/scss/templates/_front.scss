@@ -68,3 +68,76 @@
     padding: rem-calc(150 0);
   }
 }
+
+.reviews-section {
+  .grid-container {
+    position: relative;
+  }
+
+  .vertical-lines {
+    @include show-for(medium);
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+
+    .wpb_wrapper {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .line-item {
+      width: 1px;
+      height: 100%;
+      background-color: rgba(255,255,255,.1);
+    }
+  }
+
+  .reviews-quote {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    .vc_icon_element-background {
+      background-color: $accent !important;
+    }
+  }
+
+  // To override default style
+  .vc_icon_element.vc_icon_element-outer .vc_icon_element-inner.vc_icon_element-size-lg .vc_icon_element-icon {
+    font-size: rem-calc(24) !important;
+  }
+}
+
+.review-avatar img {
+  display: block;
+  width: rem-calc(70);
+  height: rem-calc(70);
+  border-radius: 50%;
+  margin-bottom: rem-calc(20);
+}
+
+.testimonial-content {
+  @include font-zillo;
+  font-weight: 300;
+  line-height: 1.75;
+  color: #ccc;
+  text-align: center;
+}
+
+.testimonial-user {
+  font-family: Roboto;
+  color: #fff;
+}
+
+.testimonial-job {
+  font-family: Roboto;
+  color: #999;
+  font-size: rem-calc(14);
+}

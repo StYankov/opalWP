@@ -77,8 +77,8 @@ if ( ! empty( $el_id ) ) {
 if ( ! empty( $full_width ) ) {
 	$css_classes[] = 'fluid';
 
-	if( 'stretch_row' === $full_width )
-		$inner_container_classes[] = 'grid-container';
+	// if( 'stretch_row' === $full_width )
+	// 	$inner_container_classes[] = 'grid-container';
 	
 	if ( 'stretch_row_content' === $full_width ) {
 		$inner_container_classes[] = 'fluid';
@@ -169,9 +169,11 @@ foreach( $css_varaibles as $key => $value )
 $wrapper_attributes[] = 'style="' . implode('; ', $style_content) . '"';
 
 $output .= '<div ' . implode( ' ', $wrapper_attributes ) . '>';
-$output .= '<div class="' . implode( ' ', $inner_container_classes ) . '">';
-$output .= wpb_js_remove_wpautop( $content );
-$output .= '</div>';
+	$output .= ($full_width === 'stretch_row' ? '<div class="grid-container">' : '');
+		$output .= '<div class="' . implode( ' ', $inner_container_classes ) . '">';
+			$output .= wpb_js_remove_wpautop( $content );
+		$output .= '</div>';
+	$output .= ($full_width === 'stretch_row' ? '</div>' : '');
 $output .= '</div>';
 
 echo $output;

@@ -2,8 +2,16 @@
     @include font-zillo;
 }
 
+.font-roboto {
+    font-family: Roboto, sans-serif;
+}
+
 .text-muted {
     color: #666;
+}
+
+.text-ccc {
+    color: #ccc;
 }
 
 .text-white {

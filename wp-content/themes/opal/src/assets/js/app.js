@@ -8,5 +8,7 @@ window.$ = $;
 // the line below
 import './lib/foundation-explicit-pieces';
 import './lib/front-slider';
+import './lib/isotope-gallery';
+import './lib/hotspots';
 
 $(document).foundation();
