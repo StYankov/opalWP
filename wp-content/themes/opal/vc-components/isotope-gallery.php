@@ -8,6 +8,15 @@ vc_map([
     'category'     => 'Opal',
     'params'          => [
         [
+            'type'        => 'dropdown',
+            'heading'     => 'Columns',
+            'param_name'  => 'columns',
+            'value'       => [
+                'Three Columns' => 'three-column',
+                'Four Columns'  => 'four-column'
+            ]
+        ],
+        [
             'type'        => 'param_group',
             'heading'     => 'Categories',
             'param_name'  => 'categories',

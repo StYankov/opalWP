@@ -10,5 +10,6 @@ import './lib/foundation-explicit-pieces';
 import './lib/front-slider';
 import './lib/isotope-gallery';
 import './lib/hotspots';
+import './lib/slider-testimonials';
 
 $(document).foundation();

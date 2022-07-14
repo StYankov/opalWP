@@ -21,7 +21,7 @@ ob_start();
                     <?php endif; ?>
 
                     <?php if( !empty($heading) ) : ?>
-                        <h1 class="front-slider__heading"><?= $heading; ?></h1>
+                        <h1 class="front-slider__heading"><?= rawurldecode( base64_decode( $heading ) ); ?></h1>
                     <?php endif; ?>
                     <div class="dots">
                         <div class="dot"></div>

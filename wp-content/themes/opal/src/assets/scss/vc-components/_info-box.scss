@@ -37,13 +37,12 @@
     }
 
     &__heading {
-        font-family: Roboto;
+        @include font-roboto;
         line-height: 1;
         margin-bottom: rem-calc(12);
     }
 
     &__description {
-        @include font-zillo;
         color: #666;
         margin-bottom: 0;
     }

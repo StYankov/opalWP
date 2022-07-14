@@ -1,7 +1,3 @@
-.main-container {
-  @include xy-grid-container;
-}
-
 .main-grid {
   @include xy-grid();
   margin-top: 1rem;

@@ -70,7 +70,7 @@ if ( ! function_exists( 'foundationpress_scripts' ) ) :
 
 		global $post;
 
-		if( $post && has_shortcode( $post->post_content, 'front_slider' ) ) {
+		if( $post && (has_shortcode( $post->post_content, 'front_slider' ) || has_shortcode( $post->post_content, 'testimonials')) ) {
 			wp_enqueue_style( 'slick', '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css' );
 			wp_enqueue_script( 'slick', '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js', ['jquery'], '1.8.1', true );
 		}

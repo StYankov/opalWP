@@ -17,7 +17,7 @@
 @include foundation-accordion;
 @include foundation-accordion-menu;
 @include foundation-badge;
-@include foundation-breadcrumbs;
+// @include foundation-breadcrumbs;
 @include foundation-button-group;
 // @include foundation-callout;
 @include foundation-card;
@@ -72,6 +72,7 @@
 @import "modules/content";
 @import "modules/footer";
 @import "modules/editor-style";
+@import "modules/breadcrumbs";
 
 // Components
 @import "components/buttons";
@@ -89,7 +90,13 @@
 @import "vc-components/isotope-gallery";
 @import "vc-components/latest-posts";
 @import "vc-components/hotspots";
+@import "vc-components/agent";
+@import "vc-components/testimonials";
 
 // Templates
 @import "templates/front";
 // @import "templates/kitchen-sink";
+
+// Pages
+@import "pages/about-us";
+@import "pages/contacts";

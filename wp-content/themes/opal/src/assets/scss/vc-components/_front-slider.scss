@@ -6,6 +6,10 @@
         max-height: rem-calc(800);
     }
 
+    &:hover .slick-arrow {
+        opacity: 1;
+    }
+
     .front-slider__overlay {
         @include position(absolute, 0, 0, 0, 0);
         display: flex;
@@ -46,6 +50,7 @@
         .front-slider__location {
             @include font-zillo;
             font-size: rem-calc(24);
+            font-weight: 400;
             line-height: rem-calc(36);
             max-width: rem-calc(460);
             margin-bottom: rem-calc(25);
@@ -56,7 +61,7 @@
             font-size: rem-calc(12);
             font-weight: 600;
             color: #fff;
-            margin-bottom: 0;
+            margin-bottom: rem-calc(4);
             text-transform: uppercase;
             letter-spacing: rem-calc(2);
         }
@@ -93,6 +98,10 @@
 
         .dots {
             margin-top: rem-calc(26);
+        }
+
+        .yellow {
+            color: $accent;
         }
     }
 }
@@ -157,6 +166,8 @@
         transform: translateY(-50%);
         cursor: pointer;
         z-index: 100;
+        opacity: 0;
+        transition: 0.3s ease-out;
 
         &:hover {
             background-color: #fff;

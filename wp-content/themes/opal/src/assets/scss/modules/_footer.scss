@@ -1,6 +1,5 @@
 #footer {
   background-color: #383838;
-  margin-top: rem-calc(20);
   padding: rem-calc(60 0);
 
   @include breakpoint(medium) {

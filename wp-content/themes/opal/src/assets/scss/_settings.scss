@@ -84,8 +84,8 @@ $black: #000;
 $white: #FFF;
 $accent: #f1ca31;
 $body-background: #F7F7F7;
-$body-font-color: $black;
-$body-font-family: 'Roboto', "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+$body-font-color: $medium-gray;
+$body-font-family: 'Zilla Slab', "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 $body-antialiased: true;
 $global-margin: 1rem;
 $global-padding: 1rem;
@@ -137,17 +137,17 @@ $header-font-family: 'Barlow', 'Open Sans', sans-serif;
 $header-font-weight: 700;
 $header-font-style: normal;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
-$header-color: inherit;
-$header-lineheight: 1.15;
+$header-color: $black;
+$header-lineheight: 1.2;
 $header-margin-bottom: 0.5rem;
 $header-styles: (
   small: (
     'h1': ('font-size': 35),
     'h2': ('font-size': 26),
     'h3': ('font-size': 18),
-    'h4': ('font-size': 17),
-    'h5': ('font-size': 16),
-    'h6': ('font-size': 16),
+    'h4': ('font-size': 18),
+    'h5': ('font-size': 18),
+    'h6': ('font-size': 18),
   ),
   medium: (
     'h1': ('font-size': 50),
@@ -161,7 +161,7 @@ $header-styles: (
 $header-text-rendering: optimizeLegibility;
 $small-font-size: 80%;
 $header-small-font-color: $medium-gray;
-$paragraph-lineheight: 1.6;
+$paragraph-lineheight: 1.75;
 $paragraph-margin-bottom: 1rem;
 $paragraph-text-rendering: optimizeLegibility;
 $code-color: $black;
@@ -281,7 +281,7 @@ $breadcrumbs-item-separator-color: $medium-gray;
 // 11. Button
 // ----------
 
-$button-font-family: 'Open Sans';
+$button-font-family: $header-font-family;
 $button-padding: rem-calc(13 30);
 $button-margin: 0 0 $global-margin 0;
 $button-fill: solid;
@@ -822,12 +822,12 @@ $thumbnail-radius: $global-radius;
 // 53. Title Bar
 // -------------
 
-$titlebar-background: $dark-nav-color;
-$titlebar-color: $white;
-$titlebar-padding: 0.5rem;
+$titlebar-background: $white;
+$titlebar-color: $black;
+$titlebar-padding: rem-calc(20 15);
 $titlebar-text-font-weight: bold;
-$titlebar-icon-color: $white;
-$titlebar-icon-color-hover: $medium-gray;
+$titlebar-icon-color: $black;
+$titlebar-icon-color-hover: $black;
 $titlebar-icon-spacing: 0.25rem;
 
 // 54. Tooltip
@@ -862,7 +862,7 @@ $xy-grid: true;
 $grid-container: $global-width;
 $grid-columns: 12;
 $grid-margin-gutters: (
-  small: 20px,
+  small: 24px,
   medium: 30px
 );
 $grid-padding-gutters: $grid-margin-gutters;

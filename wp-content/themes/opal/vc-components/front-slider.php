@@ -27,7 +27,7 @@ vc_map([
             'admin_value' => true
         ],
         [
-            'type'    => 'textfield',
+            'type'    => 'textarea_raw_html',
             'heading' => 'Heading',
             'param_name' => 'heading',
             'admin_value' => true

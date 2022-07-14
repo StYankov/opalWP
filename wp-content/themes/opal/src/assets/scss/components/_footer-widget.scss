@@ -63,7 +63,6 @@
         }
         
         .address-row {
-            @include font-zillo;
             font-size: rem-calc(14);
             margin-bottom: rem-calc(2);
 
@@ -145,7 +144,6 @@
         }
 
         &__text {
-            @include font-zillo;
             color: #666;            
             transition: 0.2s ease-out;
         }

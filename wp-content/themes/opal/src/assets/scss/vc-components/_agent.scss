@@ -1,0 +1,93 @@
+.agent {
+    &__avatar {
+        position: relative;
+        overflow: hidden;
+        margin-bottom: rem-calc(20);
+
+        img {
+            height: rem-calc(300);
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__backpanel {
+        @include position(absolute, 0, 0, 0, 0);
+        width: 100%;
+        height: 100%;
+        padding: rem-calc(30);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(0,0,0,.4);
+        color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.3s ease-out;
+    }
+
+    &:hover .agent__backpanel {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &__details {
+        text-align: center;
+    }
+
+    &__name {
+        font-size: rem-calc(16);
+        line-height: 1.75;
+        margin: 0;
+        transition: 0.3s ease-out;
+
+
+        &:hover {
+            color: $accent;
+        }
+    }
+
+    &__title {
+        font-size: rem-calc(14);
+        font-family: $header-font-family;
+        color: #999;
+        font-weight: 700;
+        margin: 0;
+    }
+
+    &__phone,
+    &__email {
+        margin-bottom: rem-calc(4);
+        line-height: 1.75;
+
+        i {
+            color: $accent;
+            margin-right: rem-calc(8);
+        }
+    }
+
+    &__email {
+        margin-bottom: rem-calc(16);
+    }
+
+    &__socials {
+        display: flex;
+
+        a {
+            color: #ccc;
+            background-color: #fff;
+            width: rem-calc(32);
+            height: rem-calc(32);
+            line-height: rem-calc(32);
+            text-align: center;
+            margin: rem-calc(0 2);
+            transition: 0.3s ease-out;
+
+            &:hover {
+                color: #fff;
+                background-color: $accent;
+            }
+        }
+    }
+}

@@ -24,7 +24,7 @@ ob_start();
             <?php endforeach; ?>
         </div>
 
-        <div class="gallery-items">
+        <div class="gallery-items <?= $atts['columns'] ?>">
             <?php foreach( $category_to_images as $category_name => $image_urls ) : ?>
                 <?php foreach( $image_urls as $image_url ) : ?>
                     <div class="gallery-item <?= sanitize_title( $category_name ) ?>" data-mfp-src="<?= $image_url ?>" data-category="<?= sanitize_title( $category_name ) ?>">

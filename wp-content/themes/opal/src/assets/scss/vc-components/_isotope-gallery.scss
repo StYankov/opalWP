@@ -83,5 +83,17 @@
                 z-index: 2;
             }
         }
+
+        &.three-column .gallery-item {
+            @include breakpoint(xlarge) {
+                @include xy-cell(4);
+            }
+
+            img {
+                @include breakpoint(medium) {
+                    height: rem-calc(310);
+                }
+            }
+        }
     }
 }
