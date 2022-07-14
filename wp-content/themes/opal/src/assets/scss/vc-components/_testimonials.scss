@@ -42,22 +42,34 @@
             display: block;
             margin: 0 auto;
             text-align: center;
-            max-width: rem-calc(760);
+            max-width: rem-calc(300);
+
+            @include breakpoint(medium) {
+                max-width: rem-calc(760);
+            }
         }
 
         &__content {
-            font-size: rem-calc(30);
+            color: #000;
+            font-size: rem-calc(18);
             line-height: rem-calc(40);
-            margin-bottom: rem-calc(70);
+            margin-bottom: rem-calc(60);
+
+            @include breakpoint(medium) {
+                font-size: rem-calc(30);
+            }
         }
 
         &__client {
+            font-family: Roboto;
+            color: #000;
             font-size: rem-calc(18);
             font-weight: 700;
             margin-bottom: rem-calc(10);
         }
 
         &__title {
+            font-family: Roboto;
             color: #999;
             font-size: rem-calc(14);
             font-weight: 500;

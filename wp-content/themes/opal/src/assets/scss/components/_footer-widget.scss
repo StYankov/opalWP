@@ -123,6 +123,10 @@
             border-right: 1px solid #e9e9e9;
         }
     }
+
+    .footer-widget__hours .list-item__text {
+        color: #999;
+    }
 }
 
 .icons-list {
@@ -135,7 +139,7 @@
         display: flex;
 
         &__icon {
-            margin-right: rem-calc(15);
+            margin-right: rem-calc(11);
 
             i {
                 font-size: rem-calc(14);

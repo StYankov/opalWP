@@ -65,6 +65,13 @@
             background-color: $accent;
         }
     }
+
+    .white-box,
+    .yellow-box {
+        @include breakpoint(small only) {
+            margin-bottom: rem-calc(35);
+        }
+    }
 }
 
 .about-us-cta  {
@@ -107,13 +114,21 @@
 
     .cta-title {
         font-family: Barlow, sans-serif;
-        font-size: rem-calc(60);
+        font-size: rem-calc(25);
         font-weight: 700;
         text-transform: uppercase;
         letter-spacing: -1.5px;
         margin-bottom: rem-calc(16);
         line-height: 1.75;
         color: #fff;
+
+        @include breakpoint(medium) {
+            font-size: rem-calc(40);
+        }
+
+        @include breakpoint(large) {
+            font-size: rem-calc(60);
+        }
     }
 
     .button {

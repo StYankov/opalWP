@@ -18,7 +18,8 @@
     }
 }
 
-.grid-section {
+.grid-section,
+.grid-section.fluid {
     margin-bottom: var(--section-margin-bottom, rem-calc(16));
 
     @include breakpoint(medium) {

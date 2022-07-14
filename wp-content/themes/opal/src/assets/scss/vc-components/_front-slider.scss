@@ -1,6 +1,5 @@
 .front-slider-container {
     position: relative;
-    max-height: rem-calc(500);
 
     @include breakpoint(large) {
         max-height: rem-calc(800);
@@ -11,14 +10,31 @@
     }
 
     .front-slider__overlay {
-        @include position(absolute, 0, 0, 0, 0);
+        position: relative;
+        padding: rem-calc(40 16);
+        padding-bottom: rem-calc(70);
         display: flex;
         align-items: center;
-        background-color: rgba(0,0,0,0.25);
+        background-color: rgba(0,0,0,0.4);
         z-index: 50;
+
+        @include breakpoint(small only) {
+            .grid-container .grid-x {
+                flex-direction: column;
+            }
+        }
+
+        @include breakpoint(medium) {
+            min-height: rem-calc(600);
+        }
 
         .grid-container {
             width: 100%;
+
+            @include breakpoint(small only) {
+                max-width: rem-calc(345);
+                margin: 0 auto;
+            }
         }
 
         .front-slider__subheading {
@@ -26,20 +42,25 @@
             text-transform: uppercase;
             font-size: rem-calc(12);
             font-weight: 600;
-            letter-spacing: rem-calc(2);
             margin-bottom: rem-calc(10);
+
+            @include breakpoint(medium) {
+                letter-spacing: rem-calc(2);
+            }
         }
         
         .front-slider__heading {
-            font-size: rem-calc(42);
+            font-size: rem-calc(46);
             font-weight: 700;
             color: #fff;
             text-transform: uppercase;
             line-height: 1.15;
             margin: 0;
+            margin-top: rem-calc(20);
 
             @include breakpoint(medium) {
                 font-size: rem-calc(60);
+                margin-top: 0;
             }
 
             @include breakpoint(large) {
@@ -49,21 +70,33 @@
 
         .front-slider__location {
             @include font-zillo;
-            font-size: rem-calc(24);
             font-weight: 400;
-            line-height: rem-calc(36);
-            max-width: rem-calc(460);
-            margin-bottom: rem-calc(25);
+            font-size: rem-calc(15);
+            line-height: rem-calc(18);
+            max-width: rem-calc(280);
+            margin-bottom: rem-calc(14);
             color: #fff;
+
+            @include breakpoint(medium) {
+                font-size: rem-calc(24);
+                line-height: rem-calc(36);
+                max-width: rem-calc(460);
+                margin-bottom: rem-calc(25);
+            }
         }
 
         .front-slider__above-price {
-            font-size: rem-calc(12);
+            font-size: rem-calc(9);
             font-weight: 600;
             color: #fff;
-            margin-bottom: rem-calc(4);
+            margin-bottom: rem-calc(8);
             text-transform: uppercase;
-            letter-spacing: rem-calc(2);
+
+            @include breakpoint(medium) {
+                font-size: rem-calc(12);
+                letter-spacing: rem-calc(2);
+                margin-bottom: rem-calc(4);
+            }
         }
 
         .front-slider__price {
@@ -71,18 +104,35 @@
             line-height: 1;
             margin-bottom: 0;
             font-weight: bold;
+
+            @include breakpoint(medium down) {
+                font-size: rem-calc(28);
+            }
         }
 
         a.button {
-            margin-top: rem-calc(36);
+            margin-top: rem-calc(16);
             margin-bottom: 0;
+
+            @include breakpoint(medium) {
+                margin-top: rem-calc(36);
+            }
         }
 
         .left-col {
             padding-right: rem-calc(35);
 
-            @include breakpoint(large) {
+            @include breakpoint(medium) {
                 border-right: 1px solid #fff;
+                padding-right: 0;
+            }
+
+            @include breakpoint(large) {
+                padding-left: rem-calc(16);
+            }
+
+            @include breakpoint(xlarge) {
+                @include xy-cell(4);
             }
         }
 
@@ -90,7 +140,7 @@
             padding: rem-calc(10 0);
             order: -1;
 
-            @include breakpoint(large) {
+            @include breakpoint(medium) {
                 padding-left: rem-calc(50);
                 order: 2;
             }
@@ -102,13 +152,19 @@
 
         .yellow {
             color: $accent;
+
+            @include breakpoint(medium down) {
+                letter-spacing: -4px;
+            }
         }
     }
 }
 .front-slider {
-    position: relative;
+    @include position(absolute, 0, 0, 0, 0);
+
+    // position: relative;
     display: flex;
-    min-height: rem-calc(500);
+    // min-height: rem-calc(570);
 
     @include breakpoint(large) {
         max-height: rem-calc(800);
@@ -118,14 +174,28 @@
         display: none;
     }
 
+    // .slick-track {
+    //     display: flex !important;
+    // }
+
+    // .slick-slide {
+    //     height: auto;
+    // }
+
     .slick-list,
-    .slick-slide,
     .slick-track {
-        min-height: rem-calc(500) !important;
-        @include breakpoint(large) {
-            max-height: rem-calc(800);
-        }
+        height: 100% !important;
     }
+
+
+    // .slick-list,
+    // .slick-slide,
+    // .slick-track {
+    //     // min-height: rem-calc(570) !important;
+    //     @include breakpoint(large) {
+    //         max-height: rem-calc(800);
+    //     }
+    // }
 
     .slick-dots {
         position: absolute;
@@ -159,8 +229,8 @@
         position: absolute;
         top: 50%;
         left: 0;
-        width: rem-calc(100);
-        height: rem-calc(100);
+        width: rem-calc(90);
+        height: rem-calc(90);
         border-radius: 0;
         background-color: rgba(0,0,0,0.25);
         transform: translateY(-50%);
@@ -197,6 +267,6 @@
         object-fit: cover;
         width: 100%;   
         height: 100%;
-        min-height: rem-calc(500);
+        // min-height: rem-calc(570);
     }
 }

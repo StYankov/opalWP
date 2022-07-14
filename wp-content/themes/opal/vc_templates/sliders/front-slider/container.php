@@ -12,12 +12,15 @@ $link = vc_build_link( $url );
 ob_start();
 ?>
 <div class="front-slider-container">
+    <div class="<?= implode( ' ', $classes ) ?>">
+        <?= do_shortcode( $content ); ?>
+    </div>
     <div class="front-slider__overlay">
         <div class="grid-container">
             <div class="grid-x">
                 <div class="cell medium-5 left-col">
                     <?php if( !empty($subheading) ) : ?>
-                        <h6 class="front-slider__subheading"><?= $subheading ?></h6>
+                        <h6 class="front-slider__subheading show-for-medium"><?= $subheading ?></h6>
                     <?php endif; ?>
 
                     <?php if( !empty($heading) ) : ?>
@@ -30,6 +33,10 @@ ob_start();
                     </div>
                 </div>
                 <div class="cell medium-6 right-col">
+                    <?php if( !empty($subheading) ) : ?>
+                        <h6 class="front-slider__subheading hide-for-medium"><?= $subheading ?></h6>
+                    <?php endif; ?>
+
                     <?php if( !empty( $location ) ) : ?>
                         <h4 class="front-slider__location"><?= $location ?></h4>
                     <?php endif; ?>
@@ -45,8 +52,5 @@ ob_start();
                 </div>
             </div>
         </div>
-    </div>
-    <div class="<?= implode( ' ', $classes ) ?>">
-        <?= do_shortcode( $content ); ?>
     </div>
 </div>

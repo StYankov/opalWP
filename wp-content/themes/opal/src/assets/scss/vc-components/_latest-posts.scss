@@ -7,13 +7,15 @@
         border-radius: rem-calc(5);
         overflow: hidden;
         transition: 0.3s ease-out;
-
-        &:hover {
-            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.15);
-        }
+        margin-bottom: rem-calc(40);
 
         @include breakpoint(medium) {
             @include xy-cell(4);
+            margin-bottom: 0;
+        }
+
+        &:hover {
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.15);
         }
 
         .wp-post-image {

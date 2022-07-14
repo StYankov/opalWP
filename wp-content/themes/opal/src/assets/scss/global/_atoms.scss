@@ -29,3 +29,15 @@
 .mb-0 {
     margin-bottom: 0;
 }
+
+.center-mobile {
+    @include breakpoint(small only) {
+        text-align: center;
+    }
+
+    .dots {
+        @include breakpoint(small only) {
+            justify-content: center;
+        }
+    }
+}

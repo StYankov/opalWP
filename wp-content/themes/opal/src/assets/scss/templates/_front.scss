@@ -1,5 +1,12 @@
 .property-subdescription {
   font-size: rem-calc(20);
+  color: #000;
+}
+
+.home-benefits {
+  @include breakpoint(small only) {
+    background-color: #fff;
+  }
 }
 
 .home .white-box {
@@ -10,12 +17,22 @@
   line-height: 1;
   z-index: 10;
 
+  @include breakpoint(small only) {
+    width: calc(100% - #{rem-calc(70)});
+    margin: 0 auto;
+    margin-top: rem-calc(-90);
+  }
+
   @include breakpoint(medium) {
     max-height: rem-calc(210);
   }
   
   .vc_icon_element {
     margin-bottom: rem-calc(15);
+
+    @include breakpoint(small only) {
+      margin-bottom: rem-calc(10);
+    }
   }
 
   .vc_row {
@@ -25,6 +42,10 @@
   h2 {
     line-height: 1;
   }
+}
+
+.image-background {
+  @include show-for(medium);
 }
 
 .image-background .wpb_wrapper {

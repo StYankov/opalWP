@@ -54,9 +54,12 @@
     }
 
     .accordion {
-        max-height: rem-calc(500);
         overflow: auto;
         padding-right: rem-calc(20);
+
+        @include breakpoint(medium) {
+            max-height: rem-calc(500);
+        }
 
         &::-webkit-scrollbar {
             background-color: #e0e0e0;
