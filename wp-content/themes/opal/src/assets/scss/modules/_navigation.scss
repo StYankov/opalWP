@@ -45,6 +45,7 @@
 
 .top-bar .top-bar-right {
   a {
+    font-family: Roboto;
     font-size: rem-calc(14);
     color: $black;
     font-weight: 700;
@@ -58,4 +59,13 @@
 
 .title-bar .menu-icon {
   width: rem-calc(30);
+}
+
+.mobile-off-canvas-menu a {
+  color: #3f4448;
+  font-size: rem-calc(15);
+}
+
+.mobile-off-canvas-menu li {
+  border-bottom: 1px solid #ebebeb;
 }
