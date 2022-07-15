@@ -24,13 +24,13 @@ vc_map([
             'type'        => 'textfield',
             'heading'     => 'Subheading',
             'param_name'  => 'subheading',
-            'admin_value' => true
+            'admin_label' => true
         ],
         [
             'type'    => 'textarea_raw_html',
             'heading' => 'Heading',
             'param_name' => 'heading',
-            'admin_value' => true
+            'admin_label' => true
         ],
         [
             'type'       => 'textfield',

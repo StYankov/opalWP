@@ -3,14 +3,14 @@
 /**
  * Shortcode attributes
  * @var array $atts
- * @var string $class
+ * @var string $text
  */
 $atts             = vc_map_get_attributes( $this->getShortcode(), $atts );
 extract( $atts );
 
 $classes = ['latest-posts'];
-if( !empty($class) )
-    $classes[] = $class;
+if( !empty($text) )
+    $classes[] = $text;
 
 $query = new WP_Query( ['posts_per_page' => 3] );
 

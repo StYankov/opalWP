@@ -23,12 +23,17 @@ vc_map([
             'type'    => 'textfield',
             'heading' => 'Heading',
             'param_name' => 'heading',
-            'admin_value' => true
+            'admin_label' => true
         ],
         [
             'type'       => 'textfield',
             'heading'    => 'Short Description',
             'param_name' => 'description'
+        ],
+        [
+            'type'       => 'checkbox',
+            'heading'    => 'Animate',
+            'param_name' => 'animate'
         ]
     ]
 ]);

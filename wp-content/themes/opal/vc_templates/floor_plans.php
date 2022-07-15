@@ -4,15 +4,21 @@
  * Shortcode attributes
  * @var array $atts
  * @var array $floors
+ * @var string $wrapper_class
  */
 $atts             = vc_map_get_attributes( $this->getShortcode(), $atts );
 extract( $atts );
 
 $floors = vc_param_group_parse_atts( $atts['floors'] );
 
+$container_class = ['floor-plans'];
+
+if( !empty($wrapper_class) )
+    $container_class[] = $wrapper_class;
+
 ob_start();
 ?>
-<div class="floor-plans">
+<div class="<?= implode(' ', $container_class) ?>">
     <ul class="tabs" data-deep-link="true" data-deep-link-smudge="true" data-deep-link-smudge-delay="500" data-tabs id="deeplinked-tabs">
         <?php foreach( $floors as $i => $floor ) : ?>
             <li class="tabs-title<?= $i == 0 ? ' is-active' : '' ?>"><a href="#floor-<?= $i + 1 ?>" aria-selected="<?= $i === 0 ? 'true' : 'false' ?>"><?= $floor['name'] ?></a></li>

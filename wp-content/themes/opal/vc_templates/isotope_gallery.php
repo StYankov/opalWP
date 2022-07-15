@@ -16,9 +16,9 @@ foreach( $categories as $item ) {
 
 ob_start();
 ?>
-    <div class="isotope-gallery">
+    <div class="isotope-gallery wpb_animate_when_almost_visible wpb_fadeInUp fadeInUp">
         <div class="gallery-filters">
-            <button class="button active" data-filter="*"><?php _e( 'All', 'opal' ); ?></button>
+            <button class="button active" data-filter="*"><?php _e( 'All', 'golfvilla' ); ?></button>
             <?php foreach( array_keys( $category_to_images ) as $category_name ) : ?>
                 <button class="button" data-filter="<?= sanitize_title( $category_name ) ?>"><?= $category_name ?></button> 
             <?php endforeach; ?>

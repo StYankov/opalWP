@@ -11,7 +11,7 @@ vc_map([
             'type'    => 'textfield',
             'heading' => 'Amenity',
             'param_name' => 'text',
-            'admin_value' => true
+            'admin_label' => true
         ]
     ]
 ]);

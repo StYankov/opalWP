@@ -11,13 +11,13 @@ vc_map([
             'type'    => 'textfield',
             'heading' => 'Name',
             'param_name' => 'name',
-            'admin_value' => true
+            'admin_label' => true
         ],
         [
             'type'    => 'textfield',
             'heading' => 'Title',
             'param_name' => 'title',
-            'admin_value' => true
+            'admin_label' => true
         ],
         [
             'type'    => 'attach_image',

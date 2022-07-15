@@ -11,6 +11,7 @@ import './lib/front-slider';
 import './lib/isotope-gallery';
 import './lib/hotspots';
 import './lib/slider-testimonials';
+import './lib/count-up';
 
 $(document).foundation();
 

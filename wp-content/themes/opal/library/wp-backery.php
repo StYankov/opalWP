@@ -57,3 +57,22 @@ function foundationpress_vc_spacer_settings( $attributes, $tag ) {
     }
     return $attributes;
 }
+
+add_filter( 'vc_element_settings_filter', 'foundationpress_vc_column_inner_animation', 10, 2 );
+function foundationpress_vc_column_inner_animation( $attributes, $tag ) {
+    if( 'vc_column_inner' === $tag ) {
+        array_unshift( $attributes['params'], vc_map_add_css_animation() );
+    }
+
+    return $attributes;
+}
+
+add_filter( 'vc_shortcodes_css_class', 'foundationpress_vc_column_inner_animation_class', 10, 3 );
+function foundationpress_vc_column_inner_animation_class( $classes, $tag, $atts ) {
+    if( 'vc_column_inner' === $tag ) {
+        if( !empty($atts['css_animation']) )
+            $classes .= (' wpb_animate_when_almost_visible wpb_' . $atts['css_animation'] . ' ' . $atts['css_animation']);
+    }
+
+    return $classes;
+}

@@ -16,7 +16,7 @@ vc_map([
             'type'        => 'vc_link',
             'heading'     => 'Link',
             'param_name'  => 'url',
-            'admin_value' => true
+            'admin_label' => true
         ]
     ]
 ]);

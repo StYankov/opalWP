@@ -8,6 +8,11 @@ vc_map([
     'category'     => 'Opal',
     'params'          => [
         [
+            'type'    => 'textfield',
+            'heading' => 'Class',
+            'param_name' => 'wrapper_class' 
+        ],
+        [
             'type'    => 'param_group',
             'heading' => 'Floors',
             'param_name' => 'floors',

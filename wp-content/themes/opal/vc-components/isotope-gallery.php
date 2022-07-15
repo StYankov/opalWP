@@ -20,13 +20,13 @@ vc_map([
             'type'        => 'param_group',
             'heading'     => 'Categories',
             'param_name'  => 'categories',
-            'admin_value' => true,
+            'admin_label' => true,
             'params'      => [
                 [
                     'type'       => 'textfield',
                     'heading'    => 'Category Name',
                     'param_name' => 'category_name',
-                    'admin_value'=> true
+                    'admin_label'=> true
                 ],
                 [
                     'type'       => 'attach_images',

@@ -17,7 +17,7 @@ $points = isset( $data['data_points'] ) ? $data['data_points'] : [];
 
 ob_start();
 ?>
-<div class="image-hotspot">
+<div class="image-hotspot wpb_animate_when_almost_visible wpb_fadeInUp fadeInUp">
     <div class="pins-list">
         <ul class="accordion" data-accordion>
             <?php foreach( $points as $i => $point ) : ?>

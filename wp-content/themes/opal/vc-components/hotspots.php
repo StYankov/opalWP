@@ -21,7 +21,7 @@ vc_map([
             'heading' => 'HotSpot',
             'param_name'  => 'hotspot_id',
             'value'       => $options,
-            'admin_value' => true
+            'admin_label' => true
         ]
     ]
 ]);

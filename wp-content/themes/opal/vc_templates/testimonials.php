@@ -4,15 +4,21 @@
  * Shortcode attributes
  * @var array $atts
  * @var array $slides
+ * @var string $wrapper_class
  */
 $atts             = vc_map_get_attributes( $this->getShortcode(), $atts );
 extract( $atts );
 
 $slides = vc_param_group_parse_atts( $slides );
 
+$contianer_class = ['slider-testimonials'];
+
+if( !empty($wrapper_class) )
+    $contianer_class[] = $wrapper_class;
+
 ob_start();
 ?>
-<div class="slider-testimonials">
+<div class="<?= implode( ' ', $contianer_class ) ?>">
     <?php foreach( $slides as $slide ) : ?>
         <div class="testimonial-item">
             <div class="testimonial-item__inner">

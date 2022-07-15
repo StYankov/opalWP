@@ -81,6 +81,10 @@ if ( ! function_exists( 'foundationpress_scripts' ) ) :
 			wp_enqueue_style( 'magnific', 'https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css' );
 		}
 
+		if( $post && has_shortcode( $post->post_content, 'countup' ) ) {
+			wp_enqueue_script( 'waypoints', 'https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js', false, false, true );
+		}
+
 	}
 
 	add_action( 'wp_enqueue_scripts', 'foundationpress_scripts' );
