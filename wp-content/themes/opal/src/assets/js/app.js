@@ -24,3 +24,21 @@ $(document).ready(function() {
 
     jQuery('.home .image-background').css('min-height', (currentHeight + 35) + 'px');
 });
+
+$(document).ready(function() {
+    $(window).on('scroll', function() {
+        var scrollTop = $(document).scrollTop();
+
+        if(scrollTop > 500) {
+            $('.scrollup').fadeIn();
+        } else {
+            $('.scrollup').fadeOut();
+        }
+    });
+
+    $('.scrollup').on('click', function(e) {
+        e.preventDefault();
+
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+});

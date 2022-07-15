@@ -21,6 +21,9 @@
 	</div><!-- Close off-canvas content -->
 <?php endif; ?>
 
+<a href="#" class="scrollup">
+	<i class="fa-solid fa-angle-up"></i>
+</a>
 <?php wp_footer(); ?>
 </body>
 </html>

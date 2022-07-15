@@ -12,3 +12,23 @@
 }
 
 @import '../components/footer-widget';
+
+.scrollup {
+  display: none;
+  position: fixed;
+  bottom: rem-calc(24);
+  right: rem-calc(24);
+  background-color: $accent;
+  color: #000;
+  font-size: rem-calc(18);
+  border-radius: 50%;
+  width: rem-calc(54);
+  height: rem-calc(54);
+  line-height: rem-calc(54);
+  text-align: center;
+
+  &:hover {
+    color: #000;
+    background-color: darken($accent, 10%);
+  }
+}
