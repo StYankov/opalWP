@@ -73,6 +73,7 @@ if ( ! function_exists( 'foundationpress_scripts' ) ) :
 		if( $post && (has_shortcode( $post->post_content, 'front_slider' ) || has_shortcode( $post->post_content, 'testimonials')) ) {
 			wp_enqueue_style( 'slick', '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css' );
 			wp_enqueue_script( 'slick', '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js', ['jquery'], '1.8.1', true );
+			wp_enqueue_script( 'swipe', 'https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js', ['jquery'], false, true );
 		}
 
 		if( $post && has_shortcode( $post->post_content, 'isotope_gallery' ) ) {

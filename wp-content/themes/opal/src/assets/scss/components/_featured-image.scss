@@ -4,7 +4,7 @@
   background-color: #c3c9cb;
   background-position: center;
   background-repeat: no-repeat;
-  height: rem-calc(100);
+  height: rem-calc(200);
 
   display: flex;
   flex-direction: column;
@@ -20,7 +20,7 @@
   }
 
   @include breakpoint(medium) {
-    height: rem-calc(200);
+    height: rem-calc(280);
   }
 
   @include breakpoint(xlarge) {

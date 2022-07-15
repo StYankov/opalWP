@@ -68,3 +68,44 @@ if ( ! function_exists( 'wpt_register_theme_customizer' ) ) :
 		return $classes;
 	}
 endif;
+
+
+if ( ! function_exists( 'foundationpress_register_theme_customizer_header' ) ) :
+	function foundationpress_register_theme_customizer_header( $wp_customize ) {
+        $forms = get_posts( ['post_type'     => 'wpcf7_contact_form', 'numberposts'   => -1] );
+
+		$form_options = ['' => 'None'];
+		foreach( $forms as $post )
+			$form_options[$post->ID] = $post->post_title;
+
+		// Create custom panels
+		$wp_customize->add_section(
+			'opal_header_content', array(
+				'title'    => __( 'Header', 'golfvilla' ),
+				'priority' => 1000,
+				'panel'	   => ''
+			)
+		);
+
+		$wp_customize->add_setting( 'opal_header_phone' );
+		$wp_customize->add_setting( 'opal_header_contact_form' );
+
+		$wp_customize->add_control( 'opal_header_phone', [
+			'type' 		=> 'text',
+			'priority'  => 10,
+			'section'   => 'opal_header_content',
+			'label'	    => 'Header Phone Number',
+			''
+		] );
+
+		$wp_customize->add_control( 'opal_header_contact_form', [
+			'type' 		=> 'select',
+			'priority'  => 10,
+			'section'   => 'opal_header_content',
+			'label'	    => 'Header Contact Form',
+			'choices'   => $form_options
+		] );
+	}
+
+	add_action( 'customize_register', 'foundationpress_register_theme_customizer_header' );
+endif;

@@ -129,6 +129,15 @@
         @include breakpoint(large) {
             font-size: rem-calc(60);
         }
+
+        a {
+            color: $accent;
+            transition: 0.3s ease-out;
+        }
+
+        a:hover {
+            color: darken($accent, 15%);
+        }
     }
 
     .button {

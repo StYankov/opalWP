@@ -6,4 +6,10 @@ $(document).ready(function() {
         
         $('.pins-list .accordion').foundation('down', $target);
     });
+
+    var $hotspot = $('.image-hotspot');
+
+    if($hotspot.length) {
+        $hotspot.css('height', ($hotspot.height() + 10) + 'px');
+    }
 });

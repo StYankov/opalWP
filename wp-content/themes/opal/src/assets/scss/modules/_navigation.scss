@@ -44,6 +44,19 @@
 }
 
 .top-bar .top-bar-right {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+
+  @include breakpoint(medium) {
+    padding-left: rem-calc(60);
+  }
+
+  @include breakpoint(large) {
+    padding-left: rem-calc(110);
+  }
+
   a {
     font-family: Roboto;
     font-size: rem-calc(14);
@@ -54,6 +67,30 @@
 
   a:hover {
     color: $accent;
+  }
+  
+  .top-bar-wrap {
+    @include show-for(medium);
+    display: flex;
+    align-items: center;
+  }
+
+  .top-bar-phone {
+    color: $accent;
+    font-size: rem-calc(24);
+  }
+
+  .schedule-visit {
+    display: flex;
+    align-items: center;
+    margin-left: rem-calc(26);
+    margin-bottom: 0;
+
+    i {
+      color: #fff;
+      font-size: rem-calc(22);
+      margin-right: rem-calc(8);
+    }
   }
 }
 

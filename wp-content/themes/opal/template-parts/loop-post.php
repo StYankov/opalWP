@@ -18,6 +18,11 @@
 		</header>
 		<div class="entry-content">
 			<h4><?php the_title(); ?></h4>
+			<div class="post-meta">
+				<span class="posted-on">
+					<time datetime="<?= get_the_date() ?>"><?= get_the_date('F m, Y'); ?></time>
+				</span>
+			</div>
 		</div>
 	</a>
 </article>

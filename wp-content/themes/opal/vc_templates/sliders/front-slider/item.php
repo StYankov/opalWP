@@ -9,6 +9,7 @@ $background_image = wp_get_attachment_image_url( $atts['attachment'], 'full' );
 
 ob_start();
 ?>
+<!-- <div class="front-slider__item" style="background-image: url(<?= $background_image ?>)"> -->
 <div class="front-slider__item">
     <img src="<?= $background_image ?>" />
 </div>

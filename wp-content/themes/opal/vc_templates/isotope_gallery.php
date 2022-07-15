@@ -14,9 +14,14 @@ foreach( $categories as $item ) {
     $category_to_images[$category] = $image_urls;
 }
 
+$container_class = ['isotope-gallery'];
+
+if( !empty($wrapper_class) )
+    $container_class[] = $wrapper_class;
+
 ob_start();
 ?>
-    <div class="isotope-gallery wpb_animate_when_almost_visible wpb_fadeInUp fadeInUp">
+    <div class="<?= implode( ' ', $container_class ) ?>">
         <div class="gallery-filters">
             <button class="button active" data-filter="*"><?php _e( 'All', 'golfvilla' ); ?></button>
             <?php foreach( array_keys( $category_to_images ) as $category_name ) : ?>

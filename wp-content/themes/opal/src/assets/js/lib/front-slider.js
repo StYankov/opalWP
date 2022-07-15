@@ -12,7 +12,7 @@ $(document).ready(function() {
         fade: true,
         arrows: false,
         dots: true,
-        touchMove: false,
+        touchMove: true,
         prevArrow: '<button type="button" class="slick-prev"><i class="fa-solid fa-angle-left"></i></button>',
         nextArrow: '<button type="button" class="slick-next"><i class="fa-solid fa-angle-right"></i></button>',
         mobileFirst: true,
@@ -21,7 +21,8 @@ $(document).ready(function() {
                 breakpoint: 768,
                 settings: {
                     arrows: true,
-                    dots: false
+                    dots: false,
+                    touchMove: false,
                 }
             }
         ]

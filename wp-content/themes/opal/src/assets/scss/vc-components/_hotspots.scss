@@ -18,6 +18,8 @@
     }
     
     .hotspot-map {
+        height: 100%;
+        
         @include breakpoint(medium) {
             @include xy-cell(8, null, 0);
         }
