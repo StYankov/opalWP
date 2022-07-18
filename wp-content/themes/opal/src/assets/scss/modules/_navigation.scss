@@ -74,23 +74,24 @@
     display: flex;
     align-items: center;
   }
+}
 
-  .top-bar-phone {
-    color: $accent;
-    font-size: rem-calc(24);
-  }
+.top-bar-phone {
+  color: $accent;
+  font-size: rem-calc(24);
+}
 
-  .schedule-visit {
-    display: flex;
-    align-items: center;
-    margin-left: rem-calc(26);
-    margin-bottom: 0;
+.schedule-visit {
+  display: flex;
+  align-items: center;
+  margin-left: rem-calc(26);
+  margin-bottom: 0;
+  letter-spacing: 0;
 
-    i {
-      color: #fff;
-      font-size: rem-calc(22);
-      margin-right: rem-calc(8);
-    }
+  i {
+    color: #fff;
+    font-size: rem-calc(22);
+    margin-right: rem-calc(8);
   }
 }
 
@@ -105,4 +106,16 @@
 
 .mobile-off-canvas-menu li {
   border-bottom: 1px solid #ebebeb;
+}
+
+.quick-nav {
+  @include hide-for(medium);
+  display: flex;
+  align-items: center;
+  margin-top: rem-calc(30);
+  justify-content: center;
+
+  .top-bar-phone {
+    font-size: 1.5rem;
+  }
 }
