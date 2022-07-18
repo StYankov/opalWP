@@ -31,6 +31,7 @@
 
     &__map {
         background-color: #000;
+        height: rem-calc(300);
 
         @include breakpoint(medium) {
             height: 50%;
